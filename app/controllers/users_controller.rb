@@ -15,11 +15,12 @@ class UsersController < ApplicationController
     if user && user.password == params[:password] 
       render json: user
     else 
-      render json: {error: 'invalid creds'}
+      render json: {error: "Invalid credentials, please try again"}
     end
   end
 
   def create
+    p params
     user = User.create({first_name: params[:first_name], last_name: params[:last_name], username: params[:username], email: params[:email], password: params[:password], image: params[:image]})
     render json: {user: user}
   end
