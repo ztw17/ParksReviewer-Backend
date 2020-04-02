@@ -10,9 +10,18 @@ class UsersController < ApplicationController
     render json: user
   end
 
+  def login
+    user = User.find_by(email: params[:email])
+    if user && user.password == params[:password] 
+      render json: user
+    else 
+      render json: {error: 'invalid creds'}
+    end
+  end
+
   def create
     user = User.create({first_name: params[:first_name], last_name: params[:last_name], username: params[:username], email: params[:email], password: params[:password], image: params[:image]})
-    render json: user
+    render json: {user: user}
   end
 
   def update
