@@ -7,11 +7,11 @@ Review.destroy_all
 Tag.destroy_all
 
 # Users
-User.create(first_name: "Zach", last_name: "Weber", username: "ztw", email: "zweb@email.com", password: "password", image: "https://image.flaticon.com/icons/svg/1246/1246351.svg")
-User.create(first_name: "Paul", last_name: "Bramos", username: "pauljb", email: "paul@email.com", password: "password", image: "https://image.flaticon.com/icons/svg/1246/1246351.svg")
-User.create(first_name: "Lauren", last_name: "Weber", username: "lweb88", email: "lauren@email.com", password: "password", image: "https://image.flaticon.com/icons/svg/1246/1246351.svg")
-User.create(first_name: "Jane", last_name: "Halstead", username: "jweb04", email: "jweb@email.com", password: "password", image: "https://image.flaticon.com/icons/svg/1246/1246351.svg")
-User.create(first_name: "Mark", last_name: "Weber", username: "mweb17", email: "mark@email.com", password: "password", image: "https://image.flaticon.com/icons/svg/1246/1246351.svg")
+User.create(first_name: "Zach", last_name: "Weber", username: "ztw", email: "zweb@email.com", password: "password")
+User.create(first_name: "Paul", last_name: "Bramos", username: "pauljb", email: "paul@email.com", password: "password")
+User.create(first_name: "Lauren", last_name: "Weber", username: "lweb88", email: "lauren@email.com", password: "password")
+User.create(first_name: "Jane", last_name: "Halstead", username: "jweb04", email: "jweb@email.com", password: "password")
+User.create(first_name: "Mark", last_name: "Weber", username: "mweb17", email: "mark@email.com", password: "password")
 
 admin = User.first
 paul = User.second

@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    # has_one_attached :image
     has_many :reviews
     has_many :parks, through: :reviews
     has_many :park_tags, through: :parks

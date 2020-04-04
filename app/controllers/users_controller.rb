@@ -20,7 +20,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    p params
     user = User.create({first_name: params[:first_name], last_name: params[:last_name], username: params[:username], email: params[:email], password: params[:password], image: params[:image]})
     render json: {user: user}
   end

@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(version: 2020_03_31_175406) do
     t.string "state"
     t.string "description"
     t.string "weather"
-    t.decimal "longitude", precision: 10, scale: 7
-    t.decimal "latitude", precision: 10, scale: 7
+    t.decimal "longitude"
+    t.decimal "latitude"
     t.string "image"
     t.bigint "creator_id"
     t.datetime "created_at", precision: 6, null: false
