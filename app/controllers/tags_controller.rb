@@ -11,7 +11,8 @@ class TagsController < ApplicationController
   end
 
   def create
-    tag = Tag.create({name: params[:name]})
+    tag = Tag.find_or_create_by({name: params[:name]})
+    ParkTag.create({park_id: params[:park_id], tag: tag})
     render json: tag
   end
 
