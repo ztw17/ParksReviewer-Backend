@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
 
   def index
     reviews = Review.all
-    render json: reviews
+    render json: reviews.with_attached_image
   end
 
   def show
