@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :favorites
   resources :park_tags
   resources :tags
   resources :reviews

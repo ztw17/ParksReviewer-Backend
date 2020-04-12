@@ -5,8 +5,8 @@ class CreateParks < ActiveRecord::Migration[6.0]
       t.string :state
       t.string :description
       t.string :weather
-      t.decimal :longitude
-      t.decimal :latitude
+      t.float :longitude
+      t.float :latitude
       t.string :image
       t.references :creator
 

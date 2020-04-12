@@ -1,6 +1,7 @@
 class User < ApplicationRecord
     # has_one_attached :image
     has_many :reviews
+    has_many :favorites
     has_many :parks, through: :reviews
     has_many :park_tags, through: :parks
     has_many :tags, through: :park_tags

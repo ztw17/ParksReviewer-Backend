@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_31_175406) do
+ActiveRecord::Schema.define(version: 2020_04_12_192304) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,13 @@ ActiveRecord::Schema.define(version: 2020_03_31_175406) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "park_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "park_tags", force: :cascade do |t|
     t.integer "park_id"
     t.integer "tag_id"
@@ -48,8 +55,8 @@ ActiveRecord::Schema.define(version: 2020_03_31_175406) do
     t.string "state"
     t.string "description"
     t.string "weather"
-    t.decimal "longitude"
-    t.decimal "latitude"
+    t.float "longitude"
+    t.float "latitude"
     t.string "image"
     t.bigint "creator_id"
     t.datetime "created_at", precision: 6, null: false
