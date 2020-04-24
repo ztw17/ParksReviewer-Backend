@@ -11,14 +11,14 @@ class ParksController < ApplicationController
   end
 
   def create
-    park = Park.create({name: params[:name], state: params[:state], description: params[:description], weather: params[:weather], longitude: params[:longitude], latitude: params[:latitude], image: params[:image], user_id: params[:user_id]})
+    park = Park.create({name: params[:name], state: params[:state], description: params[:description], weather: params[:weather], longitude: params[:longitude], latitude: params[:latitude], image: params[:image], creator_id: params[:creator_id]})
     ParkTag.create({park: park, tag: Tag.find_or_create_by(name: params["park_tag"])})
     render json: park
   end
 
   def update
     park = Park.find(params[:id])
-    park.update({name: params[:name], state: params[:state], description: params[:description], weather: params[:weather], longitude: params[:longitude], latitude: params[:latitude], image: params[:image], user_id: params[:user_id]})
+    park.update({name: params[:name], state: params[:state], description: params[:description], weather: params[:weather], longitude: params[:longitude], latitude: params[:latitude], image: params[:image], creator_id: params[:creator_id]})
     render json: park
   end
 
@@ -31,6 +31,6 @@ class ParksController < ApplicationController
   private
 
   def park_params
-    params.require(:park).permit(:name, :state, :description, :weather, :longitude, :latitude, :image, :user_id)
+    params.require(:park).permit(:name, :state, :description, :weather, :longitude, :latitude, :image, :creator_id)
   end
 end

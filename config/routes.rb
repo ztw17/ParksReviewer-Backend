@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :favorites
-  resources :park_tags
-  resources :tags
-  resources :reviews
+  resources :favorites, only: [:index, :create, :destroy]
+  resources :park_tags, only: [:index, :create, :destroy]
+  resources :tags, only: [:index, :create, :destroy]
+  resources :reviews, only: [:index, :create, :update, :destroy]
   resources :users
   post"/login",to: "users#login" 
   resources :parks
