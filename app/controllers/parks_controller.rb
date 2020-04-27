@@ -12,7 +12,7 @@ class ParksController < ApplicationController
 
   def create
     park = Park.create({name: params[:name], state: params[:state], description: params[:description], weather: params[:weather], longitude: params[:longitude], latitude: params[:latitude], image: params[:image], creator_id: params[:creator_id]})
-    ParkTag.create({park: park, tag: Tag.find_or_create_by(name: params["park_tag"])})
+    # ParkTag.create({park: park, tag: Tag.find_or_create_by(name: params["park_tag"])})
     render json: park
   end
 
