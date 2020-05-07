@@ -2,7 +2,7 @@
 
 **Quick Links**
 
-Backend repo: https://github.com/ztw17/ParksReviewer-Frontend
+Frontend repo: https://github.com/ztw17/ParksReviewer-Frontend
 
 Demo: https://www.youtube.com/watch?v=Ov322Iv3fDQ&t=2s
 ***
