@@ -42,3 +42,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Serializer
 gem 'active_model_serializers'
+
+# ActiveSupport
+gem "activesupport", ">= 6.0.3.1"
+
+# ActionPack
+gem "actionpack", ">= 6.0.3.1"
