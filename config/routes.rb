@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :reviews, only: [:index, :create, :update, :destroy]
   resources :users
   post"/login",to: "users#login" 
+  # get "/signup" => "users#new"
   resources :parks
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
