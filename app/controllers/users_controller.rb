@@ -20,13 +20,23 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create({first_name: params[:first_name], last_name: params[:last_name], username: params[:username], email: params[:email], password: params[:password]})
+    user = User.create(
+      {first_name: params[:first_name], 
+      last_name: params[:last_name], 
+      username: params[:username], 
+      email: params[:email], 
+      password: params[:password]})
     render json: {user: user}
   end
 
   def update
     user = User.find(params[:id])
-    user.update({first_name: params[:first_name], last_name: params[:last_name], username: params[:username], email: params[:email], password: params[:password]})
+    user.update(
+      {first_name: params[:first_name], 
+      last_name: params[:last_name], 
+      username: params[:username], 
+      email: params[:email], 
+      password: params[:password]})
     render json: user
   end
 

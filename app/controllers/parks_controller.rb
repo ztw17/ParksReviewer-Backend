@@ -11,14 +11,29 @@ class ParksController < ApplicationController
   end
 
   def create
-    park = Park.create({name: params[:name], state: params[:state], description: params[:description], weather: params[:weather], longitude: params[:longitude], latitude: params[:latitude], image: params[:image], creator_id: params[:creator_id]})
-    # ParkTag.create({park: park, tag: Tag.find_or_create_by(name: params["park_tag"])})
+    park = Park.create(
+      {name: params[:name], 
+      state: params[:state], 
+      description: params[:description], 
+      weather: params[:weather], 
+      longitude: params[:longitude], 
+      latitude: params[:latitude], 
+      image: params[:image], 
+      creator_id: params[:creator_id]})
     render json: park
   end
 
   def update
     park = Park.find(params[:id])
-    park.update({name: params[:name], state: params[:state], description: params[:description], weather: params[:weather], longitude: params[:longitude], latitude: params[:latitude], image: params[:image], creator_id: params[:creator_id]})
+    park.update(
+      {name: params[:name], 
+      state: params[:state], 
+      description: params[:description], 
+      weather: params[:weather], 
+      longitude: params[:longitude], 
+      latitude: params[:latitude], 
+      image: params[:image], 
+      creator_id: params[:creator_id]})
     render json: park
   end
 
