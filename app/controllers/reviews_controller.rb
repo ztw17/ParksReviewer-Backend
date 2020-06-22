@@ -11,13 +11,24 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    review = Review.create({content: params[:content], visit_date: params[:visit_date], rating: params[:rating], user_id: params[:user_id], park_id: params[:park_id], image: params[:image]})
+    review = Review.create({
+      content: params[:content], 
+      visit_date: params[:visit_date], 
+      rating: params[:rating], 
+      user_id: params[:user_id], 
+      park_id: params[:park_id], 
+      image: params[:image]})
     render json: review
   end
 
   def update
     review = Review.find(params[:id])
-    review.update({content: params[:content], visit_date: params[:visit_date], rating: params[:rating], user_id: params[:user_id], park_id: params[:park_id], image: params[:image]})
+    review.update({content: params[:content], 
+      visit_date: params[:visit_date], 
+      rating: params[:rating], 
+      user_id: params[:user_id], 
+      park_id: params[:park_id], 
+      image: params[:image]})
     render json: review
   end
 

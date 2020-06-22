@@ -20,8 +20,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create(
-      {first_name: params[:first_name], 
+    user = User.create({
+      first_name: params[:first_name], 
       last_name: params[:last_name], 
       username: params[:username], 
       email: params[:email], 
@@ -31,8 +31,8 @@ class UsersController < ApplicationController
 
   def update
     user = User.find(params[:id])
-    user.update(
-      {first_name: params[:first_name], 
+    user.update({
+      first_name: params[:first_name], 
       last_name: params[:last_name], 
       username: params[:username], 
       email: params[:email], 

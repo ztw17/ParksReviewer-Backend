@@ -11,8 +11,8 @@ class ParksController < ApplicationController
   end
 
   def create
-    park = Park.create(
-      {name: params[:name], 
+    park = Park.create({
+      name: params[:name], 
       state: params[:state], 
       description: params[:description], 
       weather: params[:weather], 
@@ -25,8 +25,8 @@ class ParksController < ApplicationController
 
   def update
     park = Park.find(params[:id])
-    park.update(
-      {name: params[:name], 
+    park.update({
+      name: params[:name], 
       state: params[:state], 
       description: params[:description], 
       weather: params[:weather], 
