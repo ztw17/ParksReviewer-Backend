@@ -47,4 +47,4 @@ gem 'active_model_serializers'
 gem "activesupport", ">= 6.0.3.1"
 
 # ActionPack
-gem "actionpack", ">= 6.0.3.1"
+gem "actionpack", ">= 6.0.3.2"
