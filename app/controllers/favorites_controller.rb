@@ -15,7 +15,7 @@ class FavoritesController < ApplicationController
     render json: favorite
   end
 
-  def update
+  def updates
     favorite = Favorite.find(params[:id])
     favorite.update({user_id: params[:user_id], park_id: params[:park_id]})
     render json: favorite
